@@ -1,0 +1,141 @@
+//int led = 11;
+int rgb_red = 9; //red
+int rgb_green = 8; //green
+int rgb_blue = 7; //blue
+
+int speaker = 12;
+
+int littleFinger = A1;
+int ringFinger = A2;
+int middleFinger = A3;
+int indexFinger = A4;
+
+int sensorValue1; //little finger
+int sensorValue2; //ring finger
+int sensorValue3; //middle finger
+int sensorValue4; //index finger
+
+void setup() {
+//    pinMode(led, OUTPUT);
+    pinMode (rgb_red, OUTPUT);
+    pinMode (rgb_green, OUTPUT);
+    pinMode (rgb_blue, OUTPUT);
+    
+    pinMode(speaker, OUTPUT);
+    
+    pinMode(littleFinger, INPUT);
+    pinMode(ringFinger, INPUT);
+    pinMode(middleFinger, INPUT);
+    pinMode(indexFinger, INPUT);
+    
+    digitalWrite(littleFinger, HIGH);
+    digitalWrite(ringFinger, HIGH);
+    digitalWrite(middleFinger, HIGH);
+    digitalWrite(indexFinger, HIGH);
+    
+    Serial.begin(9600);               // initialize serial port
+}
+
+void loop() {
+
+   
+    delay(100);                       // delay 1/10 of a second
+    sensorValue1 = analogRead(littleFinger);
+    Serial.println(sensorValue1);      // send sensorValue to computer
+     if (sensorValue1<=800)  //little finger
+    {
+        digitalWrite(rgb_red, LOW);
+        digitalWrite(rgb_green, HIGH);
+        digitalWrite(rgb_blue, HIGH);
+    }
+           else
+    {
+         digitalWrite(rgb_red, HIGH);
+        digitalWrite(rgb_green, HIGH);
+        digitalWrite(rgb_blue, HIGH);
+    }
+
+        
+    sensorValue2 = analogRead(ringFinger);
+    Serial.println(sensorValue2);      // send sensorValue to computer
+    
+     if (sensorValue1<=800)  //little finger
+    {
+        digitalWrite(rgb_red, LOW);
+        digitalWrite(rgb_green, HIGH);
+        digitalWrite(rgb_blue, HIGH);
+    }
+           else
+    {
+         digitalWrite(rgb_red, HIGH);
+        digitalWrite(rgb_green, HIGH);
+        digitalWrite(rgb_blue, HIGH);
+    }
+    
+    sensorValue3 = analogRead(middleFinger);
+        Serial.println(sensorValue3);      // send sensorValue to computer
+     if (sensorValue1<=800)  //little finger
+    {
+        digitalWrite(rgb_red, LOW);
+        digitalWrite(rgb_green, HIGH);
+        digitalWrite(rgb_blue, HIGH);
+    }
+           else
+    {
+         digitalWrite(rgb_red, HIGH);
+        digitalWrite(rgb_green, HIGH);
+        digitalWrite(rgb_blue, HIGH);
+    }
+    
+    sensorValue4 = analogRead(indexFinger);
+     Serial.println(sensorValue4);      // send sensorValue to computer   
+     if (sensorValue1<=800)  //little finger
+    {
+        digitalWrite(rgb_red, LOW);
+        digitalWrite(rgb_green, HIGH);
+        digitalWrite(rgb_blue, HIGH);
+    }
+           else
+    {
+         digitalWrite(rgb_red, HIGH);
+        digitalWrite(rgb_green, HIGH);
+        digitalWrite(rgb_blue, HIGH);
+    }
+    
+    
+
+    
+  
+//
+//    
+//    if (sensorValue1<=800)  //little finger
+//    {
+//        digitalWrite(rgb_red, LOW);
+//        digitalWrite(rgb_green, HIGH);
+//        digitalWrite(rgb_blue, HIGH);
+//    }
+//   else if (sensorValue2<=800) //ring finger
+//    {
+//        digitalWrite(rgb_red, LOW);
+//        digitalWrite(rgb_green, HIGH);
+//        digitalWrite(rgb_blue, HIGH);
+//    }
+//   else if (sensorValue3<=800) //middle finger
+//    {
+//        digitalWrite(rgb_red, LOW);
+//        digitalWrite(rgb_green, HIGH);
+//        digitalWrite(rgb_blue, HIGH);
+//    } 
+//    else if (sensorValue4<=800) //index finger
+//    {
+//        digitalWrite(rgb_red, LOW);
+//        digitalWrite(rgb_green, HIGH);
+//        digitalWrite(rgb_blue, HIGH);
+//    }
+//    else
+//    {
+//         digitalWrite(rgb_red, HIGH);
+//        digitalWrite(rgb_green, HIGH);
+//        digitalWrite(rgb_blue, HIGH);
+//    }
+}
