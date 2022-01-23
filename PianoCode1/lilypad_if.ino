@@ -1,5 +1,5 @@
 // sensor keys
-int key1 = 6;
+int key1 = 6;					// lilypad input 
 int key2 = 9;
 int key3 = 10;
 int key4 = 11;
@@ -7,10 +7,10 @@ int key5 = A2;
 int key6 = A3;
 int key7 = A4;
 int speaker = 5;                 // name of the speaker key
-int touchValue;                  // will store sensor readings
+int touchValue;                  // to store sensor readings
 
-//musical notes
-int C = 1046;
+//musical notes, next time use pitches.h file?
+int C = 1046;          
 int D = 1175;
 int E = 1319;
 int F = 1397;
